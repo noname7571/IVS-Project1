@@ -86,6 +86,38 @@ TEST_F(TestMatrix, MatrixGet) {
 }
 
 TEST_F(TestMatrix, MatrixEquals) {
+    std::vector<std::vector< double > > values = {{1, 2}, {3, 4}};
+    Matrix m1{2, 2};
+    m1.set(values);
+
+    EXPECT_ANY_THROW(m.operator==(m2x2));
+    EXPECT_ANY_THROW(m3x2.operator==(m2x3));
+
+    EXPECT_FALSE(m2x2.operator==(m1));
+    EXPECT_TRUE(m2x2.operator==(m2x2));
+    EXPECT_TRUE(m3x1.operator==(m3x1));
+}
+
+TEST_F(TestMatrix, MatrixSum) {
+    EXPECT_ANY_THROW(m.operator+(m2x2));
+    EXPECT_ANY_THROW(m3x2.operator+(m2x3));
+
+    EXPECT_NO_THROW(m2x2.operator+(m2x2));
+    EXPECT_NO_THROW(m3x1.operator+(m3x1));
+}
+
+TEST_F(TestMatrix, MatrixMultiply) {
+    EXPECT_NO_THROW(m1x2.operator*(m2x1));
+    EXPECT_NO_THROW(m3x3.operator*(m3x3));
+
+    EXPECT_ANY_THROW(m2x3.operator*(m2x3));
+    EXPECT_ANY_THROW(m1x2.operator*(m4x4));
+
+    EXPECT_NO_THROW(m3x3.operator*(5));
+    EXPECT_NO_THROW(m3x2.operator*(-12));
+}
+
+TEST_F(TestMatrix, MatrixSolveEq) {
     
 }
 

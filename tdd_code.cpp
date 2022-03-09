@@ -63,13 +63,13 @@ void PriorityQueue::Insert(int value)
 
     // inserts a new element at start of the list if the value is greater or the same as a value of the first element
     } else if (m_pHead->value <= value) {
-        Element_t *tmp = m_pHead;
+        Element_t *tmp = GetHead();
         m_pHead = newElement;
         newElement->pNext = tmp;
         return;
 
     } else {
-        Element_t *element = m_pHead;
+        Element_t *element = GetHead();
         while (element != NULL) {
             // inserts a new element at the end of the list
             if (element->pNext == NULL) {
@@ -104,7 +104,7 @@ bool PriorityQueue::Remove(int value)
             return true;
         }
 
-        Element_t *element = m_pHead;
+        Element_t *element = GetHead();
         while (element->pNext != NULL) {
             // finds and removes the value of the list that is supposed to be removed and if it does, returns true
             if (element->pNext->value == value) {
@@ -139,7 +139,7 @@ PriorityQueue::Element_t *PriorityQueue::Find(int value)
 
 size_t PriorityQueue::Length()
 {
-	Element_t *element = m_pHead;
+	Element_t *element = GetHead();
 
     if (element == NULL) {
         return 0; // if the list is empty, return 0
