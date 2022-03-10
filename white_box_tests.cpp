@@ -151,7 +151,8 @@ TEST_F(TestMatrix, MatrixInverse) {
     m1.set({{1, 2}, {3, 4}});
     EXPECT_NO_THROW(m1.inverse());
 
-    // TODO: Finish a couple of lines at the end
+    m3x3.set({{1, 2, 3}, {1, 3, 2}, {2, 1, 3}});
+    EXPECT_NO_THROW(m3x3.inverse());
 }
 
 /*** Konec souboru white_box_tests.cpp ***/
