@@ -3,12 +3,12 @@
 // Purpose:     Test Driven Development - priority queue test suite
 //
 // $NoKeywords: $ivs_project_1 $tdd_tests.cpp
-// $Author:     JMENO PRIJMENI <xlogin00@stud.fit.vutbr.cz>
+// $Author:     Matej Tomko <xtomko06@stud.fit.vutbr.cz>
 // $Date:       $2021-01-04
 //============================================================================//
 /**
  * @file tdd_tests.cpp
- * @author JMENO PRIJMENI
+ * @author Matej Tomko
  * 
  * @brief Testy implementace prioritni fronty.
  */
