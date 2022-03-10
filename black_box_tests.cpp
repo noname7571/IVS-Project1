@@ -142,7 +142,31 @@ TEST_F(TreeAxioms, Axiom2) {
 }
 
 TEST_F(TreeAxioms, Axiom3) {
-    // TODO: 3rd axiom
+    std::vector<BinaryTree::Node_t*> outLeafNodes;
+    tree.GetLeafNodes(outLeafNodes);
+    
+    BinaryTree::Node_t* x = outLeafNodes[0];
+    size_t a = 0;
+    while (x != tree.GetRoot()) {
+        if (x->color == BLACK) {
+            a++;
+        }
+
+        x = x->pParent;
+    }
+
+    for (BinaryTree::Node_t* y : outLeafNodes) {
+        size_t b = 0;
+        while (y != tree.GetRoot()) {
+            if (y->color == BLACK) {
+                b++;
+            }
+
+            y = y->pParent;
+        }
+
+        EXPECT_EQ(a, b);
+    }
 }
 
 /*** Konec souboru black_box_tests.cpp ***/
