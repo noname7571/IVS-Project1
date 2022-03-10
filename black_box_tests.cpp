@@ -130,10 +130,10 @@ TEST_F(TreeAxioms, Axiom1) {
 }
 
 TEST_F(TreeAxioms, Axiom2) {
-    std::vector<BinaryTree::Node_t*> outAllNodes;
-    tree.GetAllNodes(outAllNodes);
+    std::vector<BinaryTree::Node_t*> outNonLeafNodes;
+    tree.GetNonLeafNodes(outNonLeafNodes);
 
-    for (BinaryTree::Node_t* x : outAllNodes) {
+    for (BinaryTree::Node_t* x : outNonLeafNodes) {
         if (x->color == RED) {
             EXPECT_EQ(x->pLeft->color, BLACK);
             EXPECT_EQ(x->pRight->color, BLACK);
@@ -142,7 +142,7 @@ TEST_F(TreeAxioms, Axiom2) {
 }
 
 TEST_F(TreeAxioms, Axiom3) {
-    
+    // TODO: 3rd axiom
 }
 
 /*** Konec souboru black_box_tests.cpp ***/
