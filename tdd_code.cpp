@@ -4,7 +4,7 @@
 //
 // $NoKeywords: $ivs_project_1 $tdd_code.cpp
 // $Author:     Matej Tomko <xtomko06@stud.fit.vutbr.cz>
-// $Date:       $2021-01-04
+// $Date:       $2022-03-10
 //============================================================================//
 /**
  * @file tdd_code.cpp

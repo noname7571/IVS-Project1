@@ -4,7 +4,7 @@
 //
 // $NoKeywords: $ivs_project_1 $black_box_tests.cpp
 // $Author:     Matej Tomko <xtomko06@stud.fit.vutbr.cz>
-// $Date:       $2017-01-04
+// $Date:       $2022-03-10
 //============================================================================//
 /**
  * @file black_box_tests.cpp

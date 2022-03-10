@@ -4,7 +4,7 @@
 //
 // $NoKeywords: $ivs_project_1 $white_box_code.cpp
 // $Author:     Matej Tomko <xtomko06@stud.fit.vutbr.cz>
-// $Date:       $2021-01-04
+// $Date:       $2022-03-10
 //============================================================================//
 /**
  * @file white_box_tests.cpp
